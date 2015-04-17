@@ -30,7 +30,7 @@ UserSchema.methods.generateJWT = function() {
 		username: this.username,
 		exp: parseInt(exp.getTime() / 1000)
 		
-	}, 'SECTRET');
+	}, 'SECRET');
 }
 
-mongoose.model('User', CommentSchema);
+mongoose.model('User', UserSchema);
